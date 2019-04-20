@@ -1,0 +1,35 @@
+{
+    "success": true,
+    "studentGrades": [
+        {
+            "name": "Tom Z",
+            "grade": 90,
+            "course": "History",
+            "id": 1
+        },
+        {
+            "name": "Zim T",
+            "grade": 75,
+            "course": "History",
+            "id": 2
+        },
+        {
+            "name": "Sam Z",
+            "grade": 100,
+            "course": "History",
+            "id": 3
+        },
+        {
+            "name": "Jim P",
+            "grade": 90,
+            "course": "History",
+            "id": 4
+        },
+        {
+            "name": "MissingNo",
+            "course": "History",
+            "id": 5
+        }
+    ]
+
+}
