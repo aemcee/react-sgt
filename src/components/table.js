@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 // import 'materialize-css/dist/css/materialize.min.css';
-import axios from 'axios';
+// import axios from 'axios';
 import StudentRow from './student_row';
+import NavLink from './nav_link';
 
 // In Table, create a getStudents method
 // Use axios to call the dummy data file. 
@@ -20,16 +21,16 @@ class Table extends Component{
 
     // }
 
-    state = {
-        studentVariable: null
-    }
+    // // state = {
+    // //     studentVariable: null
+    // // }
 
-    componentDidMount(){
-        this.getStudents();
-    }
+    // componentDidMount(){
+    //     this.getStudents();
+    // }
 
     renderTable(){
-        const {studentVariable} = this.state;
+        const {studentVariable} = this.props;
 
         if(!studentVariable){
             return <h1 className="center">Loading Student Data</h1>
@@ -90,21 +91,22 @@ class Table extends Component{
 
     }
 
-    getStudents(){
-        axios.get("/data/student_grades.json").then((resp)=>{
-            console.log('response',resp.data.studentGrades);
+    // getStudents(){
+    //     axios.get("/data/student_grades.json").then((resp)=>{
+    //         console.log('response',resp.data.studentGrades);
 
-            this.setState({
-                studentVariable: resp.data.studentGrades
-                // studentVariable: []
-            });
-        })
-    }
+    //         this.setState({
+    //             studentVariable: resp.data.studentGrades
+    //             // studentVariable: []
+    //         });
+    //     })
+    // }
 
     render(){
         return (
             <div className="center">
                 <h1>Student Grade Table</h1>
+                <NavLink color="blue darken-2" text="Add Student" to="/add_student"/>
                 {this.renderTable()}
             </div>
         )
