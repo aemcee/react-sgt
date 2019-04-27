@@ -33,7 +33,7 @@ class AddStudent extends Component{
 
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Submit Registered',this.state.form);
+        // console.log('Submit Registered',this.state.form);
 
         // prevent mutating the state
         this.props.add({...this.state.form});
@@ -46,8 +46,8 @@ class AddStudent extends Component{
     handleInputChange = (event) => {
         const {form} = this.state;
         const {value,name} = event.target;
-        console.log('event.target',event.target.value);
-        console.log('typeof(value)',typeof(value));
+        // console.log('event.target',event.target.value);
+        // console.log('typeof(value)',typeof(value));
         // console.log('form1',form);
         // console.log('this.state1',this.state.form);
        
@@ -102,6 +102,9 @@ class AddStudent extends Component{
     }
 
     render(){
+
+        console.log('addstudent render this.props',this.props);
+        console.log('add student render value of this',this);
         return (
             <div className="center">
                 <h1>Add Student</h1>

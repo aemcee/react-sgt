@@ -6,6 +6,7 @@ import Table from './table';
 import AddStudent from './add_student';
 import {Route} from 'react-router-dom';
 import axios from 'axios';
+import StudentDetails from './student_details';
 
 
 // install react router dom
@@ -53,7 +54,7 @@ class App extends Component {
     // }
 
     createStudent(student){
-        console.log('==============STUDENT=============:', student);
+        // console.log('App.js Student', student);
         student.id = tempId++;
         student.grade = parseFloat(student.grade);
         this.setState({
@@ -67,7 +68,7 @@ class App extends Component {
 
     getStudents(){
         axios.get("/data/student_grades.json").then((resp)=>{
-            console.log('response',resp.data.studentGrades);
+            // console.log('response',resp.data.studentGrades);
 
             this.setState({
                 studentVariable: resp.data.studentGrades
@@ -96,6 +97,9 @@ class App extends Component {
     // }
 
     render(){
+
+        console.log('app.js this.state',this.state);
+
         return(
             <div className="container">
                 {/* <ul>
@@ -114,6 +118,10 @@ class App extends Component {
                 <Route path="/add_student" render={(routingProps)=> {
                     return <AddStudent {...routingProps} add={this.createStudent}/>
                 }}/>
+                {/* <Route path="/student-details" render={() => {
+                    return <StudentDetails/>
+                }}/> */}
+                <Route path="/student-details/:id" component={StudentDetails}/>
             </div>
         )
     }

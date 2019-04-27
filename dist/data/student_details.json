@@ -1,0 +1,68 @@
+{
+    "success": true,
+    "1": {
+        "student": {
+            "fullName": "Tom Zim",
+            "phone": "111-111-1111",
+            "email": "tom@gmail.com"
+        },
+        "classData": {
+            "course": "History",
+            "description": "Learn the truth about history",
+            "instructor": "Jim Bob"
+        },
+        "studentGrade": 90
+    },
+    "2": {
+        "student": {
+            "fullName": "Zim Tom",
+            "phone": "222-222-2222",
+            "email": "zim@gmail.com"
+        },
+        "classData": {
+            "course": "History",
+            "description": "Learn the truth about history",
+            "instructor": "Jim Bob"
+        },
+        "studentGrade": 75
+    },
+    "3": {
+        "student": {
+            "fullName": "Sam Zim",
+            "phone": "333-333-3333",
+            "email": "sam@gmail.com"
+        },
+        "classData": {
+            "course": "History",
+            "description": "Learn the truth about history",
+            "instructor": "Jim Bob"
+        },
+        "studentGrade": 100
+    },
+    "4": {
+        "student": {
+            "fullName": "Jim Pope",
+            "phone": "444-444-4444",
+            "email": "jim@gmail.com"
+        },
+        "classData": {
+            "course": "History",
+            "description": "Learn the truth about history",
+            "instructor": "Jim Bob"
+        },
+        "studentGrade": 90
+    },
+    "5": {
+        "student": {
+            "fullName": "MissingNo",
+            "phone": "#()$(#@*&$()&",
+            "email": "#@)_$(*#@)$(*"
+        },
+        "classData": {
+            "course": "History",
+            "description": "Learn the truth about history",
+            "instructor": "Jim Bob"
+        },
+        "studentGrade": 1
+    }
+}

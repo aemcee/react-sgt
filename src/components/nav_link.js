@@ -7,7 +7,7 @@ const NavLink = (props) => {
 
     const {color,text,to} = props;
 
-    console.log('text',text);
+    // console.log('text',text);
 
     return (
         <div className="row">

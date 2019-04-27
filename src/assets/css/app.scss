@@ -1,0 +1,9 @@
+.student-table {
+    .student-row {
+        cursor: pointer;
+
+        &:hover {
+            background-color: #d7d7d7;
+        }
+    }
+}

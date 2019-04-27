@@ -29,7 +29,18 @@ class Table extends Component{
     //     this.getStudents();
     // }
 
+    goToDetails(id){
+        // console.log('id',id);
+        // console.log('this of goToDetails',this);
+        // console.log('this.props',this.props);
+        // console.log('this.props.history before',this.props.history);
+        this.props.history.push(`/student-details/${id}`);
+        // console.log('this.props.history after',this.props.history);
+    }
+
     renderTable(){
+
+        console.log('renderTable this.props',this.props);
         const {studentVariable} = this.props;
 
         if(!studentVariable){
@@ -40,9 +51,9 @@ class Table extends Component{
             return <h1 className="center">No Student Data</h1>
         }
 
-        const studentTemp = studentVariable.map(function(value,index){
-            console.log('value',value);
-            console.log('index',index);
+        const studentTemp = studentVariable.map((value,index) => {
+            console.log('student variable value',value);
+            // console.log('index',index);
             
             return (
                 // <tr key={index}>
@@ -51,12 +62,13 @@ class Table extends Component{
                 //     <td>{value.course}</td>
                 //     <td>{value.grade}</td>
                 // </tr>  
-                <StudentRow key={value.id} {...value} />
+                <StudentRow key={value.id} {...value} seeDetails={() => this.goToDetails(value.id)} />
+                // <StudentRow key={value.id} {...value}  />
             )
         })
 
         return (
-            <table className="striped">
+            <table className="striped student-table">
             <thead  className="#01579b light-blue darken-4">
                 <tr className="white-text">
                     <th>Id</th>
